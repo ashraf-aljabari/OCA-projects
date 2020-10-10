@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/mywork.css">
+    <title>Ashraf Al-Jabari</title>
+    <style>
+      * {
+        box-sizing: border-box;
+
+      }
+
+
+      .card {
+        position: inherit;
+        margin: auto;
+        box-shadow: 5px 10px 8px #888888;
+      }
+
+      .gridContainer {
+        display: grid;
+        grid-template-areas:
+          'header header header'
+          'content content content'
+          'content content content'
+          'content content content'
+          'box-1 box-2 box-3'
+          'footer footer footer';
+        grid-gap: 1.75rem;
+
+      }
+
+      .gridHeader {
+        grid-area: header;
+        /* text-align: center; */
+        position: sticky;
+        box-shadow: 5px 6px 8px #888888;
+        top: 0;
+        width: 100vw;
+        background: #66BFBF;
+      }
+
+      .pageContent {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        grid-gap: 15px;
+        /* background: orange; */
+        color: black;
+      }
+
+      .gridSidebar {
+        grid-area: sidebar;
+        background: teal;
+        color: white;
+      }
+
+      .box-1,
+      .box-2,
+      .box-3 {
+        box-shadow: 5px 10px 8px #888888;
+      }
+
+      .box-1 {
+        grid-area: box-1;
+        background: #EAF6F6;
+        color: #131313;
+        text-align: center;
+
+      }
+
+      .box-2 {
+        grid-area: box-2;
+        background: #EAF6F6;
+        color: #131313;
+        text-align: center;
+      }
+
+      .box-3 {
+        grid-area: box-3;
+        background: #EAF6F6;
+        color: #131313;
+        text-align: center;
+      }
+
+      .bottom-con {
+        grid-area: footer;
+        text-align: center;
+        color: white;
+      }
+
+      .gridHeader,
+      .pageContent,
+      .gridSidebar,
+      .box-1,
+      .box-2,
+      .box-3,
+      .gridFooter {
+        /* background: #6f6f6f; */
+        padding: 0.75rem;
+      }
+
+
+      @media (max-width:1250px) {
+        .gridContainer {
+          grid-template-areas:
+            'header header'
+            'content content'
+            'content content'
+            'content content'
+            'content content'
+            'content content'
+            'content content'
+            'box-1 box-1'
+            'box-2 box-2'
+            'box-3 box-3'
+            'footer footer'
+          ;
+        }
+
+        .pageContent {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+
+      /* @media (max-width:500px) {} */
+
+      @media (max-width:500px) {
+        .gridContainer {
+          grid-template-areas:
+            'header'
+            'content'
+            'content'
+            'content'
+            'content'
+            'content'
+            'box-1'
+            'box-2'
+            'box-3'
+            'footer'
+          ;
+        }
+
+        .pageContent {
+          grid-template-columns: repeat(1, 1fr);
+          align-content: center;
+        }
+
+        .card {
+          width: 5rem;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gridContainer">
+
+      <header class="gridNavbar gridHeader">
+        <img src="images/ashrafC.png" width="50" height="50" style="margin: 0 0 0 1rem;" alt="MY-PICTURE">
+        <a href="index.html">Home</a>
+        <a href="myWork.html" class="active">My Work</a>
+        <a href="myProgrammingSkills.html">My Programming Skills</a>
+        <a href="about.html" class="right">About</a>
+      </header>
+
+      <section class="pageContent">
+        <div class="card" style="width: 25rem;">
+          <a href="https://ashraf-aljabari.github.io/Ashraf-Al-Jabari-Personal-Profile/">
+            <img class="card-img-top" src="images/pro1.PNG" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">My first portfolio.</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 25rem;">
+          <a href="https://ashraf-aljabari.github.io/First-Form/">
+            <img class="card-img-top" src="images/pro2.PNG" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Forms.</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 25rem;">
+          <a href="https://ashraf-aljabari.github.io/html-layout/">
+            <img class="card-img-top" src="images/pro3.PNG" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Website layout.</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 25rem;">
+          <a href="https://ashraf-aljabari.github.io/task-1/">
+            <img class="card-img-top" src="images/pro4.PNG" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Form example.</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 25rem;">
+          <a href="https://ashraf-aljabari.github.io/task-2/">
+            <img class="card-img-top" src="images/pro5.PNG" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Links</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 25rem;">
+          <a href="https://ashraf-aljabari.github.io/1.10-Tasks/">
+            <img class="card-img-top" src="images/pro6.PNG" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Multiable Tasks</p>
+          </div>
+        </div>
+
+        <!-- <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/computer.png" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div> -->
+
+      </section>
+
+      <!-- 
+      <aside class="gridSidebar">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Some Company</li>
+          <li>50 Main st, Boston MA</li>
+          <li>something@something.com</li>
+          <li>555-555-5555</li>
+          <li>Some Company</li>
+          <li>50 Main st, Boston MA</li>
+          <li>something@something.com</li>
+        </ul>
+      </aside> -->
+      <div class="box-1">
+        <h3>Flutter</h3>
+        <img src="images/app1.png" style="object-fit: ;" alt="">
+      </div>
+      <div class="box-2">
+        <h3>Champions Ground</h3>
+        <img src="images/app2.png" style="object-fit: ;" alt="">
+      </div>
+      <div class="box-3">
+        <h3>Flash Chat</h3>
+        <img src="images/app3.png" style="object-fit: cover;margin: 0 auto 0 auto;" alt="">
+      </div>
+
+
+      <div class="bottom-con">
+        <br>
+
+        <!-- image source: https://media0.giphy.com/media/H508mck9ufO9q6z76O/200w.webp?cid=ecf05e47hx98x0anji6o7cdn6ga048cccs5k2dcx011ul9ix&rid=200w.webp -->
+        <a class="footer-link" href="https://www.linkedin.com/in/ashraf-al-jabari/"> <img src="images/linkedin.webp"
+            alt="linkedin" width="50" height="50"> </a>
+
+        <!-- image source: https://media0.giphy.com/media/H508mck9ufO9q6z76O/200w.webp?cid=ecf05e47hx98x0anji6o7cdn6ga048cccs5k2dcx011ul9ix&rid=200w.webp -->
+        <a class="footer-link" href="https://twitter.com/Ashraf_Aljabari?s=09"><img src="images/twitter.webp"
+            alt="twitter" width="50" height="50"></a>
+
+        <!--  image source: https://media1.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp?cid=ecf05e47fc4f06l1mkorvgunjiijtwsav7085xd0h47595t4&rid=200.webp -->
+        <a class="footer-link" href="https://github.com/ashraf-aljabari"><img src="images/github.webp" alt="github"
+            width="50" height="50"></a>
+        <p class="copyright">© 2020 Ashraf Al-Jabari @ Orange Coding Academy.</p>
+      </div>
+  </body>
+
+</html>

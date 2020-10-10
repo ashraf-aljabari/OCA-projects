@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/myProgrammingSkills.css">
+    <link rel="icon" href="images/favicon.png" />
+    <title>Ashraf Al-Jabari</title>
+  </head>
+
+  <style>
+    .wrap {
+      max-width: 60%;
+      margin: 50px auto 50px;
+    }
+
+    .bar {
+      color: #fff;
+      letter-spacing: 1px;
+      font-weight: 500;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .bar {
+      display: inline-block;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    .bar span {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 25px;
+      background: #000;
+      border-radius: 50px;
+    }
+
+    .bar span::before {
+      position: absolute;
+      content: '';
+      top: 6px;
+      left: 5px;
+      width: 80%;
+      height: 50%;
+      background: linear-gradient(to left, #ff0057, #ffeb3b);
+      border-radius: 50px;
+      animation: bar 4s ease;
+    }
+
+    @keyframes bar {
+      from {
+        width: 0;
+      }
+    }
+
+    .bar:nth-child(1) span:before {
+      width: 75%;
+    }
+
+    .bar:nth-child(2) span:before {
+      width: 65%;
+    }
+
+    .bar:nth-child(3) span:before {
+      width: 90%;
+    }
+
+    .bar:nth-child(4) span:before {
+      width: 70%;
+    }
+
+    .bar:nth-child(5) span:before {
+      width: 65%;
+    }
+
+    .bar:nth-child(6) span:before {
+      width: 75%;
+    }
+  </style>
+
+  <body>
+
+    <div class="navbar">
+      <img src="images/ashrafC.png" width="50" height="50" style="margin: 10px 0 10px 10px;" alt="MY-PICTURE">
+      <a href="index.html">Home</a>
+      <a href="myWork.html">My Work</a>
+      <a href="myProgrammingSkills.html" class="active">My Programming Skills</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="wrap">
+      <div class="bar">
+        <h3><img style="width: 40px; height: 40px; border-radius: 30px;"
+            src="https://image.flaticon.com/icons/png/128/1216/1216733.png" alt=""> HTML/HTML5</h3>
+        <span></span>
+      </div>
+      <div class="bar">
+        <h3><img style="width: 40px; height: 40px; border-radius: 30px;"
+            src="https://cdn.iconscout.com/icon/free/png-256/css3-9-1175237.png" alt=""> CSS/CSS3</h3>
+        <span></span>
+      </div>
+      <div class="bar">
+        <h3><img style="width: 40px; height: 40px; border-radius: 30px;"
+            src="https://cdn.iconscout.com/icon/free/png-256/flutter-2038877-1720090.png" alt=""> Flutter</h3>
+        <span></span>
+      </div>
+      <div class="bar">
+        <h3><img style="width: 40px; height: 40px; border-radius: 30px;"
+            src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/OS_Android.png" alt=""> Android</h3>
+        <span></span>
+      </div>
+      <div class="bar">
+        <h3><img style="width: 40px; height: 40px; border-radius: 30px;"
+            src="https://cdn.iconscout.com/icon/free/png-256/xamarin-282427.png" alt=""> Xamarin</h3>
+        <span></span>
+      </div>
+      <div class="bar">
+        <h3><img style="width: 40px; height: 40px; border-radius: 30px;"
+            src="https://cdn.iconscout.com/icon/free/png-256/firebase-1-282796.png" alt=""> Firebase</h3>
+        <span></span>
+      </div>
+    </div>
+
+
+    <div class=" bottom-con">
+      <br>
+
+      <!-- image source: https://media0.giphy.com/media/H508mck9ufO9q6z76O/200w.webp?cid=ecf05e47hx98x0anji6o7cdn6ga048cccs5k2dcx011ul9ix&rid=200w.webp -->
+      <a class="footer-link" href="https://www.linkedin.com/in/ashraf-al-jabari/"> <img src="images/linkedin.webp"
+          alt="linkedin" width="50" height="50"> </a>
+
+      <!-- image source: https://media0.giphy.com/media/H508mck9ufO9q6z76O/200w.webp?cid=ecf05e47hx98x0anji6o7cdn6ga048cccs5k2dcx011ul9ix&rid=200w.webp -->
+      <a class="footer-link" href="https://twitter.com/Ashraf_Aljabari?s=09"><img src="images/twitter.webp"
+          alt="twitter" width="50" height="50"></a>
+
+      <!--  image source: https://media1.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp?cid=ecf05e47fc4f06l1mkorvgunjiijtwsav7085xd0h47595t4&rid=200.webp -->
+      <a class="footer-link" href="https://github.com/ashraf-aljabari"><img src="images/github.webp" alt="github"
+          width="50" height="50"></a>
+      <p class="copyright">© 2020 Ashraf Al-Jabari @ Orange Coding Academy.</p>
+    </div>
+
+
+  </body>
+
+</html>
