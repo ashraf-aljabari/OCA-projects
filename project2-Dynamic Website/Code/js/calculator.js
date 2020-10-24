@@ -4,19 +4,19 @@ class Calculater {
   this.currentOperandTextElement = currentOperandTextElement;
   this.clear();
   }
-  clear() {
+  clear = () => {
       this.currentOperand = ''
       this.previousOperand = ''
       this.operation = undefined
   } 
-  delete() {
+  delete = () => {
       this.currentOperand = this.currentOperand.toString().slice(0, -1)
   }
-  appendNumber(number) {
+  appendNumber = (number) => {
       if (number === '.' && this.currentOperand.includes('.')) return//to make the dot written for once
       this.currentOperand = this.currentOperand.toString() + number.toString() // so we can append numbers together
   }
-  chooseOperation(operation) {
+  chooseOperation = (operation) => {
       // to assure that if we don't have cuurent operand the operation won't be executed
       this.operation = operation;
       if(this.currentOperand === '') return;
@@ -49,7 +49,7 @@ class Calculater {
           return n * this.factorial((n-1));
       }
   }
-  computeOneOperand(){
+  computeOneOperand = () => {
       let computation; 
       const current = parseFloat(this.currentOperand);
       if(isNaN(current)) return;
@@ -67,7 +67,7 @@ class Calculater {
   this.operation = undefined
   this.previousOperand = ''  // to make the previous empty
   }
-  computeTwoOperands(){
+  computeTwoOperands = () => {
       let computation; 
       const prev = parseFloat(this.previousOperand) // to convert the string to number
       const current = parseFloat(this.currentOperand)
@@ -96,12 +96,12 @@ class Calculater {
       this.operation = undefined
       this.previousOperand = ''  // to make the previous empty
   }
-  getDisplayNumber(number){
+  getDisplayNumber = (number) =>{
   const floatNumber = parseFloat(number) // to convert the number to strign
   if(isNaN(floatNumber)) return ''
   return floatNumber.toLocaleString('en') // to make comas bstween numbers
   }
-  updateDisplay(){    
+  updateDisplay = () => {    
       this.currentOperandTextElement.innerText = 
       this.getDisplayNumber(this.currentOperand) 
       // we made a concation to show the operation next to the prev number 
@@ -146,10 +146,10 @@ calculater.delete()
 calculater.updateDisplay()
 });
 //navigation bar functions.
-function openNav() {
+openNav = () => {
 document.getElementById("myNav").style.display = "block";
 }
-function closeNav() {
+closeNav = () => {
 document.getElementById("myNav").style.display = "none";
 }
 
