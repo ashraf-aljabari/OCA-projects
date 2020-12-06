@@ -145,6 +145,10 @@ const ServicePage = ({ match }) => {
       );
     });
   }
+  document.title = 'PCR | Service Page';
+  document.getElementsByTagName(
+    'META'
+  )[4].content = `our service ${match.params.slug} to provide our services 24/7`;
   return (
     <>
       <Link to='/services' className='btn btn-dark my-3'>

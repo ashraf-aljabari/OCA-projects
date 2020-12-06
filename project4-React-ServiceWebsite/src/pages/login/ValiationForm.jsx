@@ -190,6 +190,9 @@ export default class ValiationForm extends React.Component {
   // end of form validation function
 
   render() {
+    document.title = 'PCR | Login and Register Page';
+    document.getElementsByTagName('META')[4].content =
+      'Login and register page for the PCR website';
     if (this.state.redirect) {
       return <Redirect to='/services' />;
     }

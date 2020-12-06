@@ -183,6 +183,9 @@ export default class Profile extends Component {
   };
 
   render() {
+    document.title = 'PCR | Profile Page';
+    document.getElementsByTagName('META')[4].content =
+      'this is the profile page for users to check there booked services and they can check the weather based on there location';
     if (this.state.isLoading) {
       return (
         <div className='loading'>

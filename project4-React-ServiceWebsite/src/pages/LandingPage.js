@@ -9,6 +9,9 @@ import { Element } from 'react-scroll';
 
 export class LandingPage extends Component {
   render() {
+    document.title = 'PCR | Landing Page';
+    document.getElementsByTagName('META')[4].content =
+      'web site for booking covid-19 tests online, for yourself or family members without having to wait, and to avoid the traffic in hospitals.';
     return (
       <section>
         <VideoBackground />
