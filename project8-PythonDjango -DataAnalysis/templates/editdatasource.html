@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center ">
+            <!-- left column -->
+            <div class="col-md-5 mt-5">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Data Source</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post" action="{% url 'updateDataSource' %}">
+                        {% csrf_token %}
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Data Source Industry </label>
+                                <input type="text" class="form-control" value="{{datasource.name}}" name="name">
+                            </div>
+                        </div>
+                        <input hidden value="{{datasource.id}}" name="id">
+
+
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-block btn-success">Save</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+
+            <!-- /.row -->
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+
+
+{% endblock %}

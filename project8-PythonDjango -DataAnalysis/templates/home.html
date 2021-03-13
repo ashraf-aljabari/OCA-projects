@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!--{% if user.is_authenticated %}-->
+<!--  Hi {{ user.username }}!-->
+<!--  <p><a href="{% url 'logout' %}">Log Out</a></p>-->
+<!--  <p><a href="{% url 'password_reset' %}">Reset Password</a></p>-->
+<!--{% else %}-->
+<!--  <p>You are not logged in</p>-->
+<!--  <a href="{% url 'login' %}">Log In</a>-->
+<!--{% endif %}-->
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center ">
+            <!-- left column -->
+            <div class="col-md-5 mt-5">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Data Source</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Data Source Industry </label>
+                                <input type="text" class="form-control" name="name">
+                            </div>
+                        </div>
+
+
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+
+
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+
+            <!-- /.row -->
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+{% endblock %}

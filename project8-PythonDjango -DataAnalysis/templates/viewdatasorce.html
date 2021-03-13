@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<!--<div class="container p-5">-->
+<!--    <div class="row">-->
+<!--        {% for datas in datasorce %}-->
+<!--        <div class="col">-->
+
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="text-center">{{datas.name}}</h5>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col">-->
+<!--                            <a href="{% url 'editdatasource' id=datas.id %}" class="btn btn-primary">Edit</a>-->
+<!--                        </div>-->
+<!--                        <div class="col">-->
+<!--                            <a href="{% url 'deletedatasource' id=datas.id %}" class="btn btn-danger">Delete</a>-->
+<!--                        </div>-->
+<!--                        <div class="col">-->
+<!--                            <a href="{% url 'viewdataset' id=datas.id %}" class="btn btn-success">View</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<!--</div>-->
+
+ <section class="content pt-5">
+
+      <!-- Default box -->
+      <div class="card ">
+        <div class="card-header">
+          <h3 class="card-title">Data Sources</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-striped projects">
+              <thead>
+                  <tr>
+                      <th style="width: 5%">
+                          #
+                      </th>
+                      <th style="width: 30%">
+                          Datasource Name
+                      </th>
+                      <th style="width: 20%">
+                          User Avatar
+                      </th>
+
+                      <th style="width: 20%">
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+              {% for datas in datasorce %}
+                  <tr>
+                      <td>
+                          {{datas.id}}
+                      </td>
+                      <td>
+                          <a>
+                              {{datas.name}}
+                          </a>
+
+                      </td>
+                      <td>
+                          <ul class="list-inline">
+
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="{% static 'dist/img/avatar5.png' %}">
+                              </li>
+
+                          </ul>
+                      </td>
+
+
+                      <td class="project-actions text-right">
+                          <a class="btn btn-primary btn-sm" href="{% url 'viewdataset' id=datas.id %}">
+                              <i class="fas fa-folder">
+                              </i>
+                              View
+                          </a>
+                          <a class="btn btn-info btn-sm" href="{% url 'editdatasource' id=datas.id %}">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="{% url 'deletedatasource' id=datas.id %}">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                  </tr>
+        {% endfor %}
+              </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+    </section>
+
+
+
+{% endblock %}
+
+
+
+    <!-- /.content -->

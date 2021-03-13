@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Area Chart</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart" style="height: 80vh">
+                            <canvas id="areaChart"
+                                    style="max-width: 100%;"></canvas>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+
+
+<!-- PIE CHART -->
+<div class="card card-danger">
+    <div class="card-header">
+        <h3 class="card-title">Death Percentage</h3>
+
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body vh-100">
+        <canvas id="pieChart" style="max-width: 100%;"></canvas>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+<div class="card card-danger">
+    <div class="card-header">
+        <h3 class="card-title">Recovered percentage</h3>
+
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body vh-100">
+        <canvas id="pieChart2" style="max-width: 100%;"></canvas>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+{% endblock %}

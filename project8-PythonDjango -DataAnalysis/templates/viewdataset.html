@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DataTable with default features</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>Country</th>
+                                                <th>Confirmed</th>
+                                                <th>Deaths</th>
+                                                <th>Recovered</th>
+                                                <th>Active</th>
+                                                <th>New_cases</th>
+                                                <th>New_deaths</th>
+                                                <th>New_recovered</th>
+                                                <th>Deaths_percentage</th>
+                                                <th>Recovered_percentage</th>
+
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for data in dataSet %}
+                                            <tr>
+                                                <td>{{data.Country}}</td>
+                                                <td>{{data.Confirmed}}</td>
+                                                <td>{{data.Deaths}}</td>
+                                                <td>{{data.Recovered}}</td>
+                                                <td>{{data.Active}}</td>
+                                                <td>{{data.New_cases}}</td>
+                                                <td>{{data.New_deaths}}</td>
+                                                <td>{{data.New_recovered}}</td>
+                                                <td>{{data.Deaths_percentage}}</td>
+                                                <td>{{data.Recovered_percentage}}</td>
+                                            </tr>
+                                            {% endfor %}
+
+
+                                        </table>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--<section class="content">-->
+                <!--    <div class="container-fluid">-->
+                <!--        <div class="row">-->
+                <!--            <div class="col-12">-->
+                <!--                <div class="card">-->
+                <!--                    <div class="card-header">-->
+                <!--                        <h3 class="card-title">DataTable with minimal features & hover style</h3>-->
+                <!--                    </div>-->
+                <!--                    &lt;!&ndash; /.card-header &ndash;&gt;-->
+                <!--                    <div class="card-body">-->
+                <!--                        <table id="example2" class="table table-bordered table-hover">-->
+                <!--                            <thead>-->
+                <!--                            <tr>-->
+                <!--                                <th>Country</th>-->
+                <!--                                <th>Confirmed</th>-->
+                <!--                                <th>Deaths</th>-->
+                <!--                                <th>Recovered</th>-->
+                <!--                                <th>Active</th>-->
+                <!--                                <th>New_cases</th>-->
+                <!--                                <th>New_deaths</th>-->
+                <!--                                <th>New_recovered</th>-->
+                <!--                                <th>Deaths_percentage</th>-->
+                <!--                                <th>Recovered_percentage</th>-->
+                <!--                            </tr>-->
+                <!--                            <tbody>-->
+                <!--                            {% for data in dataSet %}-->
+                <!--                            <tr>-->
+                <!--                                <td>{{data.Country}}</td>-->
+                <!--                                <td>{{data.Confirmed}}</td>-->
+                <!--                                <td>{{data.Deaths}}</td>-->
+                <!--                                <td>{{data.Recovered}}</td>-->
+                <!--                                <td>{{data.Active}}</td>-->
+                <!--                                <td>{{data.New_cases}}</td>-->
+                <!--                                <td>{{data.New_deaths}}</td>-->
+                <!--                                <td>{{data.New_recovered}}</td>-->
+                <!--                                <td>{{data.Deaths_percentage}}</td>-->
+                <!--                                <td>{{data.Recovered_percentage}}</td>-->
+                <!--                            </tr>-->
+                <!--                            {% endfor %}-->
+                <!--                            </tbody>-->
+                <!--                        </table>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</section>-->
+
+
+                {% endblock %}
+
